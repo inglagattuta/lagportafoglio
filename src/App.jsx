@@ -31,5 +31,6 @@ function App() {
     </>
   )
 }
+Aggiunta banner PWA e fix UI
 
 export default App

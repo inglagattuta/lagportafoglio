@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<link rel="manifest" href="/lagportafoglio/manifest.json">
+<meta name="theme-color" content="#007bff">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafoglio Dashboard</title>
+    <script type="module" crossorigin src="/lagportafoglio/assets/index-GLnOxmIQ.js"></script>
+    <link rel="stylesheet" crossorigin href="/lagportafoglio/assets/index-BKDGcLZg.css">
+  </head>
+  <body>
+    <div id="root"></div>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("/service-worker.js")
+        .then(() => console.log("✅ Service Worker registrato"))
+        .catch((err) => console.error("❌ SW error:", err));
+    });
+  }
+</script>
+
+  </body>
+</html>

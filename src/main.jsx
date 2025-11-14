@@ -1,11 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App.jsx";
+import Home from "./pages/Home.jsx";
+import Portfolio from "./pages/Portfolio.jsx";
 import "./index.css";
 
+const router = createBrowserRouter(
+  [
+    { path: "/", element: <App />, children: [
+        { index: true, element: <Home /> },
+        { path: "portfolio", element: <Portfolio /> },
+    ]},
+  ],
+  {
+    basename: "/lagportafoglio",
+  }
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-<React.StrictMode>
-<App />
-</React.StrictMode>
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );

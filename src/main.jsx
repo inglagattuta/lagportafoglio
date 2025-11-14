@@ -14,14 +14,17 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-     <Routes>
-  <Route path="/" element={<App />}>
-    <Route index element={<Home />} />
-    <Route path="portfolio" element={<Portfolio />} />
-    <Route path="score" element={<Score />} />
-    <Route path="grafici" element={<Grafici />} />
-  </Route>
-</Routes>
+     import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter basename="/lagportafoglio">
+    <App />
+  </BrowserRouter>
+);
+
     </BrowserRouter>
   </React.StrictMode>
 );

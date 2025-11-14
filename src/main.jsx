@@ -7,6 +7,10 @@ import Portfolio from "./pages/Portfolio";
 import Score from "./pages/Score";
 import Grafici from "./pages/Grafici";
 
+<Route path="score" element={<Score />} />
+<Route path="grafici" element={<Grafici />} />
+
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

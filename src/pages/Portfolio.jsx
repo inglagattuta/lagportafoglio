@@ -1,7 +1,3 @@
-import React from "react";
-
-const Portfolio = () => {
-  return <div>Sezione Portfolio in costruzione...</div>;
-};
-
-export default Portfolio;
+git add src/pages/Portfolio.jsx
+git commit -m "Aggiunta file Portfolio.jsx"
+git push origin main

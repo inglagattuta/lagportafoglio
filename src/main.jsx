@@ -3,28 +3,15 @@ import ReactDOM from "react-dom/client";
 import AppRouter from "./pages/Home";
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <AppRouter />
-  </React.StrictMode>
-);
-
-
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-     import React from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import App from "./App";
+import AppRouter from "./AppRouter";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/lagportafoglio">
-    <App />
-  </BrowserRouter>
-);
-
+  <React.StrictMode>
+    <BrowserRouter basename="/lagportafoglio">
+      <AppRouter />
     </BrowserRouter>
   </React.StrictMode>
 );

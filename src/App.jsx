@@ -1,24 +1,18 @@
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
-import Portfolio from "./pages/Portfolio";
-import Score from "./pages/Score";
-import Grafici from "./pages/Grafici";
-
+import { Outlet, Link } from "react-router-dom";
 
 export default function App() {
-return (
-<Router>
-<nav>
-<NavLink to="/">Portafoglio</NavLink>
-<NavLink to="/score">Score</NavLink>
-<NavLink to="/grafici">Grafici</NavLink>
-</nav>
+  return (
+    <div>
+      {/* NAVBAR */}
+      <nav className="p-4 bg-gray-200 flex gap-4">
+        <Link to="/">Home</Link>
+        <Link to="/portfolio">Portfolio</Link>
+      </nav>
 
-
-<Routes>
-<Route path="/" element={<Portfolio />} />
-<Route path="/score" element={<Score />} />
-<Route path="/grafici" element={<Grafici />} />
-</Routes>
-</Router>
-);
+      {/* CONTENUTO DELLE PAGINE */}
+      <main className="p-4">
+        <Outlet />
+      </main>
+    </div>
+  );
 }
